@@ -4,6 +4,12 @@ const block4Container = document.querySelector(".holiday22-block4-container");
 const block4 = document.querySelector(".holiday22-block4");
 const block5Container = document.querySelector(".holiday22-block5-container");
 const block5 = document.querySelector(".holiday22-block5");
+const block7Container = document.querySelector(".holiday22-block7-container");
+const block7 = document.querySelector(".holiday22-block7");
+const block8Container = document.querySelector(".holiday22-block8-container");
+const block8 = document.querySelector(".holiday22-block8");
+const block9Container = document.querySelector(".holiday22-block9-container");
+const block9 = document.querySelector(".holiday22-block9");
 
 // block3
 if (block3Container.offsetWidth < 1440 & block3Container.offsetWidth > 768) {
@@ -51,6 +57,50 @@ if (block5Container.offsetWidth < 1440 & block5Container.offsetWidth > 768) {
 `
 }
 
+// block7
+if (block7Container.offsetWidth < 1440 & block7Container.offsetWidth > 768) {
+    let transform = block7Container.offsetWidth / block7.offsetWidth;
+    let height = transform * 859
+
+    block7Container.style.cssText = `
+        transform:scale(${transform});
+        transform-origin: top left;
+        height: ${height}px; 
+    `
+} else {
+    block7Container.style.cssText = ` 
+`
+}
+
+// block8
+if (block8Container.offsetWidth < 1440 & block8Container.offsetWidth > 768) {
+    let transform = block8Container.offsetWidth / block8.offsetWidth;
+    let height = transform * 717
+
+    block8Container.style.cssText = `
+        transform:scale(${transform});
+        transform-origin: top left;
+        height: ${height}px; 
+    `
+} else {
+    block8Container.style.cssText = ` 
+`
+}
+
+// block9
+if (block9Container.offsetWidth < 1440 & block9Container.offsetWidth > 768) {
+    let transform = block9Container.offsetWidth / block9.offsetWidth;
+    let height = transform * 757
+
+    block9Container.style.cssText = `
+        transform:scale(${transform});
+        transform-origin: top left;
+        height: ${height}px; 
+    `
+} else {
+    block9Container.style.cssText = ` 
+`
+}
 
 window.addEventListener('resize', () => {
     // block3
@@ -99,6 +149,51 @@ window.addEventListener('resize', () => {
     `
     }
 
+    // block7
+    if (block7Container.offsetWidth < 1440 & block7Container.offsetWidth > 768) {
+        let transform = block7Container.offsetWidth / block7.offsetWidth;
+        let height = transform * 859
+
+        block7Container.style.cssText = `
+            transform:scale(${transform});
+            transform-origin: top left;
+            height: ${height}px; 
+        `
+    } else {
+        block7Container.style.cssText = ` 
+    `
+    }
+
+    // block8
+    if (block8Container.offsetWidth < 1440 & block8Container.offsetWidth > 768) {
+        let transform = block8Container.offsetWidth / block8.offsetWidth;
+        let height = transform * 717
+
+        block8Container.style.cssText = `
+        transform:scale(${transform});
+        transform-origin: top left;
+        height: ${height}px; 
+    `
+    } else {
+        block8Container.style.cssText = ` 
+`
+    }
+
+
+    // block9
+    if (block9Container.offsetWidth < 1440 & block9Container.offsetWidth > 768) {
+        let transform = block9Container.offsetWidth / block9.offsetWidth;
+        let height = transform * 757
+
+        block9Container.style.cssText = `
+        transform:scale(${transform});
+        transform-origin: top left;
+        height: ${height}px; 
+    `
+    } else {
+        block9Container.style.cssText = ` 
+`
+    }
 
 })
 
@@ -133,14 +228,14 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carou
     const nextArrow = document.querySelectorAll(".owl-next");
 
     for (let x = 0; x < 3; x++) {
-        prevArrow[x].innerHTML = `
+        prevArrow[0].innerHTML = `
             <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35.1896 17.9735L35.1896 14.5335L7.42963 14.5335L20.2296 3.01348L18.0696 0.213475L0.629628 16.2135L0.629628 16.2935L18.0696 32.2935L20.2296 29.4935L7.42963 17.9735L35.1896 17.9735Z" fill="white"/>
             </svg>
         
         `
 
-        nextArrow[x].innerHTML = `
+        nextArrow[0].innerHTML = `
             <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.81074 14.8402L0.81074 18.2802L28.5707 18.2802L15.7707 29.8002L17.9307 32.6002L35.3707 16.6002V16.5202L17.9307 0.520242L15.7707 3.32024L28.5707 14.8402L0.81074 14.8402Z" fill="white"/>
             </svg>
